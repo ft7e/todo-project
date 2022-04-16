@@ -6,14 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Manager</title>
+    <script
+      src="https://kit.fontawesome.com/655bf29240.js"
+      crossorigin="anonymous"
+    ></script>
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akshar&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <img src="images/Go logo zx.png" alt="Logo" id="logo" />
+      <div class="image-container">
+        <img src="images/Go logo zx.png" alt="Logo" id="logo" />
+      </div>
+      <div class="add-container">
+        <h1>Add Tasks</h1>
+        <div class="add-tasks-container">
+          <div style="width:100%; ">
+          <input type="text" placeholder="Tasks to Add ..." />
+        </div>
+          <div style="width: 20%; height: 46px; text-align: center; " class="add-btn-div">
+          <span class="add-btn" id="add-btn-id">Add +</span>
+          </div>
+        </div>
+      </div>
+      <div id="tasks-container">
+        <ul >
+          <li class="task-done flexbby"><div><i class="fa-solid fa-check "></i></i> Task One </div><div><i class="fa-solid fa-trash-can"></i></div></li>
+          <li class="task-type-1 flexbby"><div><i class="fa-solid fa-check fa-check-hide"></i></i> Task Two </div><div><i class="fa-solid fa-trash-can"></i></div></li>
+          <li class="task-type-2 flexbby"><div><i class="fa-solid fa-check fa-check-hide"></i></i> Task Three </div><div><i class="fa-solid fa-trash-can"></i></div></li>
+
+          <li></li>
+        </ul>
+      </div>
     </main>
     <footer>
-      <!-- <h4>Copy right C</h4> -->
+      <hr>
+      <h4><i class="fa-solid fa-copyright"></i>All rights received </h4>
     </footer>
   </body>
 </html>
