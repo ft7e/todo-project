@@ -18,4 +18,19 @@ while (age < 0) {
 
 let welcomeMessage = confirm("Do you want to skip the welcoming message?");
 
-!welcomeMessage ? alert(`${gender == "male" ? "Mr." : "Ms."} ${userName}`) : "";
+!welcomeMessage
+  ? alert(`${gender.toLowerCase() == "male" ? "Mr." : "Ms."} ${userName}`)
+  : "";
+const questions = [
+  "Are you over 18 years old?",
+  "Are you single?",
+  "Do you even lift?",
+];
+const answersArr = [];
+for (let i = 0; i < questions.length; i++) {
+  let userAnswer = prompt(questions[i]);
+  userAnswer
+    ? answersArr.push(userAnswer.toLowerCase())
+    : answersArr.push("invalid");
+}
+console.log(answersArr);
