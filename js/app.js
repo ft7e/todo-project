@@ -28,9 +28,9 @@ const questions = [
 ];
 const answersArr = [];
 for (let i = 0; i < questions.length; i++) {
-  let userAnswer = prompt(questions[i]);
-  userAnswer
-    ? answersArr.push(userAnswer.toLowerCase())
+  let userAnswer = prompt(questions[i]).toLowerCase();
+  userAnswer == "yes" || userAnswer == "no" // to check if the answer is anything but 'yes' or 'no'
+    ? answersArr.push(userAnswer)
     : answersArr.push("invalid");
 }
-console.log(answersArr);
+console.log(answersArr.join(","));
