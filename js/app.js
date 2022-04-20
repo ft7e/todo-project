@@ -21,16 +21,20 @@ let welcomeMessage = confirm("Do you want to skip the welcoming message?");
 !welcomeMessage
   ? alert(`${gender.toLowerCase() == "male" ? "Mr." : "Ms."} ${userName}`)
   : "";
-const questions = [
+const possibleQuestions = [
   "Are you over 18 years old?",
   "Are you single?",
   "Do you even lift?",
 ];
-const answersArr = [];
-for (let i = 0; i < questions.length; i++) {
-  let userAnswer = prompt(questions[i]).toLowerCase();
-  userAnswer == "yes" || userAnswer == "no" // to check if the answer is anything but 'yes' or 'no'
-    ? answersArr.push(userAnswer)
-    : answersArr.push("invalid");
-}
-console.log(answersArr.join(","));
+const threeQuestions = function (questions) {
+  const answersArr = [];
+
+  for (let i = 0; i < questions.length; i++) {
+    let userAnswer = prompt(questions[i]).toLowerCase();
+    userAnswer == "yes" || userAnswer == "no" // to check if the answer is anything but 'yes' or 'no'
+      ? answersArr.push(userAnswer)
+      : answersArr.push("invalid");
+  }
+  return answersArr.join(",");
+};
+console.log(threeQuestions(possibleQuestions));
